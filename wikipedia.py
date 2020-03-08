@@ -4,29 +4,28 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 
 
-
-# Verifying that the number of subtitles presented on Wikipedia is equal 10
+# Verifying that the number of subtitles presented on Wikipedia webpage is equal 10
 def test_titles_count():
     browser = Chrome(executable_path=ChromeDriverManager().install())
-
     browser.get('https://en.wikipedia.org/wiki/Shiba_Inu')
+    
     list_of_titles = browser.find_elements_by_css_selector('.mw-headline')
-
+    
     assert len(list_of_titles) == 10
-
+    
     browser.quit()
 
-    
+ 
     
 # Verifying that after searching for the word 'Hokkaido'
 # the list of presented subtitles is equal 31
 def test_titles_count_after_search():
     browser = Chrome(executable_path=ChromeDriverManager().install())
     browser.get('https://en.wikipedia.org/wiki/Shiba_Inu')
-
+    
     search_bar = browser.find_element_by_id('searchInput')
     search_button = browser.find_element_by_id('searchButton')
-
+    
     assert search_bar.is_displayed() is True
     assert search_button.is_displayed() is True
 
@@ -39,6 +38,8 @@ def test_titles_count_after_search():
 
     browser.quit()
 
+    
+    
 # Verifying that there is only one post when you click
 # in References subtitle on the label "Dog Owners Guide: Shiba Inu'
 
