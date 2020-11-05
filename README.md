@@ -9,4 +9,4 @@
  
  - Make sure you have downloaded the following web browsers: Chrome, Firefox
 
-- Use pytest as a default test runner:  (Pycharm) File -> Settings -> Python Integrated Tools -> Default test runner -> pytest
+- Use pytest as a default test runner:  (Pycharm) File -> Settings -> Tools -> Python Integrated Tools -> Default test runner -> pytest
